@@ -1,8 +1,11 @@
+import java.awt.Graphics2D;
 import java.awt.Image;
+import java.awt.Transparency;
+import java.awt.geom.AffineTransform;
 
 public class Sprite {
 	
-	private Animation anim;
+	protected Animation anim;
 	//position (pixels)
 	private float x;
 	private float y;
@@ -99,5 +102,10 @@ public class Sprite {
 		return anim.getImage();
 	}
 	
+	public Object clone() {
+		return new Sprite(anim);
+	}
+	
+
 }
 
